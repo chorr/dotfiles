@@ -40,4 +40,5 @@ export INPUT_METHOD=fcitx
 
 # export
 export PATH=$HOME/.npm-global/bin:$HOME/.local/bin:$PATH
+export XDG_DATA_DIRS=/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share:$XDG_DATA_DIRS
 
