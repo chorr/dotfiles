@@ -6,10 +6,8 @@
 source ~/.local/share/omarchy/default/bash/rc
 
 # Add your own exports, aliases, and functions here.
-#
-# Make an alias for invoking commands you use constantly
-# alias p='python'
 alias l="lsa"
+alias lg="lazygit"
 alias conf-bash="nvim ~/.bashrc"
 alias conf-ghostty="nvim ~/.config/ghostty/config"
 alias conf-hypr="nvim ~/.config/hypr/"
@@ -17,13 +15,6 @@ alias conf-waybar="nvim ~/.config/waybar/"
 alias cd-flac="whipper cd rip --output-directory ~/Music"
 alias reboot-windows="sudo grub-reboot 2 && sudo reboot"
 
-# Use VSCode instead of neovim as your default editor
-# export EDITOR="code"
-#
-# Set a custom prompt with the directory revealed (alternatively use https://starship.rs)
-# PS1="\W \[\e]0;\w\a\]$PS1"
-
-# functions
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	command yazi "$@" --cwd-file="$tmp"
@@ -38,7 +29,16 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export INPUT_METHOD=fcitx
 
-# export
+# path
 export PATH=$HOME/.npm-global/bin:$HOME/.local/bin:$PATH
+
+# pnpm
+export PNPM_HOME="/home/chorr/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
+# flatpak
 export XDG_DATA_DIRS=/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share:$XDG_DATA_DIRS
 
