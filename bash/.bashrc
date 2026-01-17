@@ -13,7 +13,7 @@ alias conf-ghostty="nvim ~/.config/ghostty/config"
 alias conf-hypr="nvim ~/.config/hypr/"
 alias conf-waybar="nvim ~/.config/waybar/"
 alias cd-flac="whipper cd rip --output-directory ~/Music"
-alias reboot-windows="sudo grub-reboot 2 && sudo reboot"
+alias reboot-windows="sudo efibootmgr --bootnext 0008 && sudo reboot"
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
