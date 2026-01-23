@@ -112,7 +112,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias n="nvim"
-alias c="opencode"
+alias c="claude"
+alias lg="lazygit"
 alias ls="eza -lh --group-directories-first --icons=auto"
 alias lt="eza --tree --level=2 --long --icons --git"
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
