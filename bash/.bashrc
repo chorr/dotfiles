@@ -8,6 +8,7 @@ source ~/.local/share/omarchy/default/bash/rc
 # Add your own exports, aliases, and functions here.
 alias l="lsa"
 alias lg="lazygit"
+alias c="claude"
 alias conf-bash="nvim ~/.bashrc"
 alias conf-ghostty="nvim ~/.config/ghostty/config"
 alias conf-hypr="nvim ~/.config/hypr/"
